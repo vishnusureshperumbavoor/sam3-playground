@@ -1,6 +1,9 @@
 # SAM3 Playground
 
-Fun with SAM3
+Fun with SAM3 
+
+- Textual Segmentation for Videos
+- Textual and Bounding Box Segmentation for images
 
 ## UI Preview
 
@@ -32,8 +35,10 @@ Fun with SAM3
    uv pip install -e .
    ```
 
-## Quickstart
-- Start UI: `uvicorn sam3.ui:app --reload`
+5. Start UI: 
+   ```
+   uvicorn sam3.ui:app --reload
+   ```
 
 
 ## UI info

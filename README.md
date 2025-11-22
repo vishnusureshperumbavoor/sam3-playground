@@ -41,8 +41,6 @@ Fun with SAM3
    uvicorn sam3.ui:app --reload
    ```
 
-- Start UI: `uvicorn sam3.ui:app --reload`
-
 ## UI info
 
 Most of it was created by gemini 3

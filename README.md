@@ -5,9 +5,13 @@ Fun with SAM3
 - Textual Segmentation for Videos
 - Textual and Bounding Box Segmentation for images
 
-## UI Preview
+## Video Segmentation Preview
 
-![SAM3 Playground UI](ui.png)
+![Video Segmentatation](video_segmentation.png)
+
+## Image Segmentation Preview
+
+![Image Segmentatation](image_segmentation.png)
 
 ## Setup
 

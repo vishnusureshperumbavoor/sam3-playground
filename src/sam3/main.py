@@ -1,3 +1,4 @@
+import os
 from functools import lru_cache
 from typing import Dict, Tuple
 
@@ -5,7 +6,9 @@ import torch
 from PIL import Image
 from transformers import Sam3Model, Sam3Processor
 
+from dotenv import load_dotenv
 
+load_dotenv()
 
 def _resolve_device() -> str:
     """Pick the best available device for inference."""
@@ -20,8 +23,9 @@ def _resolve_device() -> str:
 def load_model() -> Tuple[Sam3Model, Sam3Processor, str]:
     """Load and cache the SAM3 model and processor."""
     device = _resolve_device()
-    model = Sam3Model.from_pretrained("facebook/sam3").to(device)
-    processor = Sam3Processor.from_pretrained("facebook/sam3")
+    hf_token = os.getenv("HF_TOKEN")
+    model = Sam3Model.from_pretrained("facebook/sam3", token=hf_token).to(device)
+    processor = Sam3Processor.from_pretrained("facebook/sam3", token=hf_token)
     return model, processor, device
 
 
